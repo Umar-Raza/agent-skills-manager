@@ -45,8 +45,9 @@ export default function Home() {
               className="dark:invert"
               src="/vercel.svg"
               alt="Vercel logomark"
-              width={16}
-              height={16}
+              width={200}
+              height={50} // Ye sirf placeholder hai
+              style={{ height: 'auto' }}
             />
             Deploy Now
           </a>

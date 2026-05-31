@@ -1,8 +1,10 @@
-import { skills } from "../skills.js";
+import { SKILLS } from "../SKILLS.js";
 
 export default async function SkillIdPage({ params }) {
     const { identifier } = await params;
-    const skill = skills.find((skills) => skills.id === identifier)
+    const skill = SKILLS.find((skills) => skills.id === identifier)
+
+    console.log('skills found:', skill);
 
     return skill ? <article className="mt-5 container">
         <h2>{skill.name}</h2>

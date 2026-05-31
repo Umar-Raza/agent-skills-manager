@@ -5,20 +5,19 @@ export default async function SkillsPage() {
     const skills = await getSkills();
 
     return (
-        <section>
-            <h1>Skills</h1>
-            <Link href="/skills/create" className="btn btn-primary mt-4">Create Skill</Link>
-            <ul>
+        <section className="p-4 flex flex-col gap-4 max-w-md mx-auto">
+            <h1 className="text-2xl font-bold">Skills</h1>
+            <Link href="/skills/create" className="btn btn-primary self-end">Create Skill</Link>
+            <ul className="menu menu-base ">
                 {skills.map((skill) => (
-                    <li key={skill.id} >
+                    <li key={skill.id} className="mb-2">
                         {/* {skill.name} */}
-                        <Link href={`/skills/${skill.id}`}>
+                        <Link href={`/skills/${skill.id}`} className="">
                             {skill.name}
                         </Link>
                     </li>
                 ))}
             </ul>
-
         </section>
 
     );

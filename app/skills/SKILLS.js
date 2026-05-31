@@ -47,6 +47,12 @@ export let skills = SKILLS;
 
 
 export async function getSkills() {
+    await new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(null)
+            console.log('skills loaded');
+        }, 3000)
+    })
     return [...SKILLS];
 }
 

@@ -136,7 +136,7 @@ export default function NewSkillPage() {
               <label className="label cursor-pointer justify-start gap-4">
                 <input
                   type="checkbox"
-                  className="toggle"
+                  className="toggle toggle-primary"
                   checked={isPublic}
                   onChange={(e) => setIsPublic(e.target.checked)}
                 />
